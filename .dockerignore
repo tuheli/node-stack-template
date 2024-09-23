@@ -1,0 +1,19 @@
+# Root level files
+.git
+.dockerignore
+Dockerfile
+README.md
+
+# Common for server and client folders
+**/node_modules
+**/.gitattributes
+**/.gitignore
+**/.prettierignore
+**/.prettierrc
+**/dist
+
+# Server folder
+**/.vscode
+
+# Client folder
+**/eslintrc.cjs
