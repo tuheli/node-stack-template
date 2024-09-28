@@ -1,11 +1,11 @@
 import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useSignInMutation } from "../../features/apiSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { isErrorMessage, saveUserInLocalStorage } from "../../common/common";
 import { signedIn } from "../../features/userSlice";
 import { openedSnackbar } from "../../features/snackbarSlice";
+import { Link } from "../link/Link";
 
 export const SignIn = () => {
   const [username, setUsername] = useState("");

@@ -1,10 +1,8 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { ChangeThemeButton } from "../theme-provider/ChangeThemeButton";
-import { SignIn } from "../sign-in/SignIn";
-import { SignUp } from "../sign-up/SignUp";
 import { Link } from "../link/Link";
+import { ChangeThemeButton } from "../theme-provider/ChangeThemeButton";
 
-export const ExamplePage = () => {
+export const AnotherPage = () => {
   return (
     <>
       <Box
@@ -31,25 +29,11 @@ export const ExamplePage = () => {
               <Box
                 sx={{
                   flex: 1,
-                  maxWidth: 500,
                 }}
               >
-                <Typography variant="h4">Node Stack Template</Typography>
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  flex: 1,
-                  maxWidth: 500,
-                }}
-              >
-                <ChangeThemeButton />
+                <Typography variant="h4">
+                  Node Stack Template - Another Page
+                </Typography>
               </Box>
             </Box>
             <Box
@@ -65,7 +49,7 @@ export const ExamplePage = () => {
                   maxWidth: 500,
                 }}
               >
-                <Link to="/another-page">Another Page</Link>
+                <Link to="/">Back to Example page</Link>
               </Box>
             </Box>
             <Box
@@ -80,22 +64,7 @@ export const ExamplePage = () => {
                   maxWidth: 500,
                 }}
               >
-                <SignUp />
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  flex: 1,
-                  maxWidth: 500,
-                }}
-              >
-                <SignIn />
+                <ChangeThemeButton />
               </Box>
             </Box>
           </Stack>
