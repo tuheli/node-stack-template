@@ -1,1 +1,1 @@
-Boilerplate code for node stack applications.
+Boilerplate code for node stack applications using aws postgres.
