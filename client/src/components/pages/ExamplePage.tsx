@@ -79,6 +79,7 @@ export const ExamplePage = () => {
           display: { xs: "block", sm: "none" },
           position: "sticky",
           bottom: 0,
+          zIndex: 9999,
         }}
       >
         <BottomNavigation />
