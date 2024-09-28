@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface RedirectProps {
@@ -8,7 +8,7 @@ interface RedirectProps {
 export const Redirect = ({ to }: RedirectProps) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     navigate(to);
   }, []);
 
