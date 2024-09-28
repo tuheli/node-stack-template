@@ -1,24 +1,22 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Link } from "../link/Link";
 import { AppBar } from "../app-bar/AppBar";
+import { BottomNavigation } from "../bottom-navigation/BottomNavigation";
 
 export const AnotherPage = () => {
   return (
     <>
       <Box
         sx={{
-          minHeight: "100dvh",
           justifyContent: "space-between",
           alignItems: "space-between",
           display: "flex",
           flexDirection: "column",
+          minHeight: "100dvh",
+          pt: 2,
         }}
       >
-        <Box
-          sx={{
-            mt: 2,
-          }}
-        >
+        <Box>
           <AppBar position="static" />
         </Box>
         <Container>
@@ -65,6 +63,15 @@ export const AnotherPage = () => {
           </Stack>
         </Container>
         <Box />
+        <Box
+          sx={{
+            display: { xs: "block", sm: "none" },
+            position: "sticky",
+            bottom: 0,
+          }}
+        >
+          <BottomNavigation />
+        </Box>
       </Box>
     </>
   );

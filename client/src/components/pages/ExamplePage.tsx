@@ -2,6 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { SignIn } from "../sign-in/SignIn";
 import { SignUp } from "../sign-up/SignUp";
 import { AppBar } from "../app-bar/AppBar";
+import { BottomNavigation } from "../bottom-navigation/BottomNavigation";
 
 export const ExamplePage = () => {
   return (
@@ -72,6 +73,15 @@ export const ExamplePage = () => {
             </Box>
           </Stack>
         </Container>
+      </Box>
+      <Box
+        sx={{
+          display: { xs: "block", sm: "none" },
+          position: "sticky",
+          bottom: 0,
+        }}
+      >
+        <BottomNavigation />
       </Box>
     </>
   );
