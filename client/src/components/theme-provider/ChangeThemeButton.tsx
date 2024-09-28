@@ -11,7 +11,7 @@ export const ChangeThemeButton = () => {
 
   return (
     <>
-      <Button variant="outlined" onClick={onClick}>
+      <Button variant="outlined" onClick={onClick} fullWidth>
         Change Theme
       </Button>
     </>

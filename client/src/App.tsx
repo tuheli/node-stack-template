@@ -1,18 +1,27 @@
 import { CssBaseline } from "@mui/material";
-import { Route, Routes } from "react-router-dom";
-import { Redirect } from "./components/redirect/Redirect";
-import { ExamplePage } from "./components/pages/ExamplePage";
 import { ThemeProvider } from "./components/theme-provider/ThemeProvider";
+import { useAppSelector } from "./app/hooks";
+import { useLocalStorageLogin } from "./hooks/useLocalStorageLogin";
+import { Snackbar } from "./components/snackbar/Snackbar";
+import { SignedInRoutes } from "./components/routes/SignedInRoutes";
+import { SignedOutRoutes } from "./components/routes/SignedOutRoutes";
 
 export const App = () => {
+  const { user } = useAppSelector((state) => state.user);
+  const { isLocalStorageLoginComplete } = useLocalStorageLogin();
+
+  if (!isLocalStorageLoginComplete) {
+    return null;
+  }
+
   return (
     <>
       <ThemeProvider>
         <CssBaseline />
-        <Routes>
-          <Route path="/" element={<ExamplePage />} />
-          <Route path="*" element={<Redirect to="/" />} />
-        </Routes>
+        <>
+          <Snackbar />
+          {user ? <SignedInRoutes /> : <SignedOutRoutes />}
+        </>
       </ThemeProvider>
     </>
   );

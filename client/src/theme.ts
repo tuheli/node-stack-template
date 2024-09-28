@@ -12,10 +12,15 @@ const lightPalette: PaletteOptions = {
 
 const darkPalette: PaletteOptions = {
   background: {
-    default: "#252525",
+    default: "#1e1e1e",
+    paper: "#222222",
   },
   text: {
     primary: "#fcfcfc",
+    secondary: "#fcfcfc",
+  },
+  primary: {
+    main: "#55009bff",
   },
 };
 
