@@ -27,13 +27,13 @@ export const useLocalStorageLogin = () => {
 
       const validationPayload = await validateAuthorizationToken({
         user,
-      });
+      }).unwrap();
 
-      if (!validationPayload.data) {
+      if (!validationPayload.user) {
         return false;
       }
 
-      dispatch(signedIn(validationPayload.data));
+      dispatch(signedIn(validationPayload));
       return true;
     } catch (error) {
       return false;
