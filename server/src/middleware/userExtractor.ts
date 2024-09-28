@@ -43,6 +43,22 @@ export const userExtractor = async (
     };
     next();
   } catch (error) {
-    next(error);
+    if (error instanceof jwt.JsonWebTokenError) {
+      return res
+        .status(401)
+        .json({ message: "Authorization token is malformed. Please sign in." });
+    }
+
+    if (error instanceof jwt.TokenExpiredError) {
+      return res
+        .status(401)
+        .json({ message: "Auhorization token is expired. Please sign in." });
+    }
+
+    if (error instanceof jwt.NotBeforeError) {
+      return res.status(500).json({ message: "Something went wrong." });
+    }
+
+    return res.status(500).json({ message: "Something went wrong." });
   }
 };
