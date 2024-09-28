@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { ChangeThemeButton } from "../change-theme/ChangeThemeButton";
+import { ChangeThemeButton } from "../theme-provider/ChangeThemeButton";
 
 export const ExamplePage = () => {
   return (
