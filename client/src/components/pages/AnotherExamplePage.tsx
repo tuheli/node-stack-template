@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Link } from "../link/Link";
-import { ChangeThemeButton } from "../theme-provider/ChangeThemeButton";
+import { AppBar } from "../app-bar/AppBar";
 
 export const AnotherPage = () => {
   return (
@@ -8,16 +8,25 @@ export const AnotherPage = () => {
       <Box
         sx={{
           minHeight: "100dvh",
-          justifyContent: "center",
-          alignItems: "center",
+          justifyContent: "space-between",
+          alignItems: "space-between",
           display: "flex",
+          flexDirection: "column",
         }}
       >
+        <Box
+          sx={{
+            mt: 2,
+          }}
+        >
+          <AppBar position="static" />
+        </Box>
         <Container>
           <Stack
             sx={{
               gap: 4,
-              my: 2,
+              mt: 4,
+              mb: 2,
             }}
           >
             <Box
@@ -53,23 +62,9 @@ export const AnotherPage = () => {
                 <Link to="/">Back to Example page</Link>
               </Box>
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  flex: 1,
-                  maxWidth: 500,
-                }}
-              >
-                <ChangeThemeButton />
-              </Box>
-            </Box>
           </Stack>
         </Container>
+        <Box />
       </Box>
     </>
   );

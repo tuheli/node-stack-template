@@ -47,3 +47,7 @@ export const toUser = (obj: unknown): User => {
 export const saveUserInLocalStorage = (user: User) => {
   localStorage.setItem("user", JSON.stringify(user));
 };
+
+export const removeUserFromLocalStorage = () => {
+  localStorage.removeItem("user");
+};

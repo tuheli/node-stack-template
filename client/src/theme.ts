@@ -60,6 +60,32 @@ export const getTheme = (mode: PaletteMode): ThemeOptions => {
           root: {},
         },
       },
+      MuiToolbar: {
+        styleOverrides: {
+          root:
+            mode === "light"
+              ? // Light mode
+                {
+                  background: "rgba(255, 255, 255, 0.2)",
+                  borderRadius: "16px",
+                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                  backdropFilter: "blur(5px)",
+                  borderWidth: "1px",
+                  borderStyle: "solid",
+                  borderColor: "rgba(255, 255, 255, 0.3)",
+                }
+              : // Dark mode
+                {
+                  background: "rgba(149, 149, 149, 0.2)",
+                  borderRadius: "16px",
+                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                  backdropFilter: "blur(5px)",
+                  borderWidth: "1px",
+                  borderStyle: "solid",
+                  borderColor: "rgba(255, 255, 255, 0.2)",
+                },
+        },
+      },
     },
   };
 };

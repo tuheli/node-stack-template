@@ -1,5 +1,7 @@
-import { Button } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { useThemeMode } from "../../hooks/useThemeMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 export const ChangeThemeButton = () => {
   const { mode, setMode } = useThemeMode();
@@ -11,9 +13,15 @@ export const ChangeThemeButton = () => {
 
   return (
     <>
-      <Button variant="outlined" onClick={onClick} fullWidth>
-        Change Theme
-      </Button>
+      <IconButton
+        size="large"
+        onClick={onClick}
+        sx={{
+          color: "text.primary",
+        }}
+      >
+        {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+      </IconButton>
     </>
   );
 };
