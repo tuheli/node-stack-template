@@ -9,7 +9,7 @@ export const ExamplePage = () => {
     <>
       <Box
         sx={{
-          height: "100dvh",
+          minHeight: "100dvh",
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
@@ -19,6 +19,7 @@ export const ExamplePage = () => {
           <Stack
             sx={{
               gap: 4,
+              my: 2,
             }}
           >
             <Box

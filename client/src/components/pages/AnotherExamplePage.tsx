@@ -7,7 +7,7 @@ export const AnotherPage = () => {
     <>
       <Box
         sx={{
-          height: "100dvh",
+          minHeight: "100dvh",
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
@@ -17,6 +17,7 @@ export const AnotherPage = () => {
           <Stack
             sx={{
               gap: 4,
+              my: 2,
             }}
           >
             <Box
