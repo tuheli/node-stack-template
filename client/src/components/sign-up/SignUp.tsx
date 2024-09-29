@@ -27,8 +27,6 @@ export const SignUp = () => {
 
       const { user } = await signIn({ username, password }).unwrap();
 
-      saveUserInLocalStorage(user);
-
       dispatch(
         signedIn({
           user,
