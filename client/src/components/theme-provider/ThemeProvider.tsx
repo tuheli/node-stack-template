@@ -4,7 +4,7 @@ import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
 } from "@mui/material";
-import { getTheme } from "../../theme";
+import { getTheme } from "../../theme/theme";
 import { SetThemeModeContext } from "./ThemeProviderContext";
 
 interface ThemeProviderProps {

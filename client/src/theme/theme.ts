@@ -1,5 +1,6 @@
 import { PaletteOptions, ThemeOptions } from "@mui/material/styles";
-import { PaletteMode } from "@mui/material";
+import { LinkProps, PaletteMode } from "@mui/material";
+import { LinkBehavior } from "./LinkBehavior";
 
 const lightPalette: PaletteOptions = {
   background: {
@@ -59,6 +60,11 @@ export const getTheme = (mode: PaletteMode): ThemeOptions => {
         styleOverrides: {
           root: {},
         },
+      },
+      MuiLink: {
+        defaultProps: {
+          component: LinkBehavior,
+        } as LinkProps,
       },
       MuiToolbar: {
         styleOverrides: {

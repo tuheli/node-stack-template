@@ -1,11 +1,17 @@
-import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Link,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 import { useSignInMutation } from "../../features/apiSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { isErrorMessage, saveUserInLocalStorage } from "../../common/common";
 import { signedIn } from "../../features/userSlice";
 import { openedSnackbar } from "../../features/snackbarSlice";
-import { Link } from "../link/Link";
 
 export const SignIn = () => {
   const [username, setUsername] = useState("");
@@ -85,7 +91,7 @@ export const SignIn = () => {
                 textAlign: "center",
               }}
             >
-              Don't have an account? <Link to="/sign-up">Sign up</Link>
+              Don't have an account? <Link href="/sign-up">Sign up</Link>
             </Typography>
           </Stack>
         </Stack>

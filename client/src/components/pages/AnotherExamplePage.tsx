@@ -1,5 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
-import { Link } from "../link/Link";
+import { Box, Container, Link, Stack, Typography } from "@mui/material";
 import { AppBar } from "../app-bar/AppBar";
 import { BottomNavigation } from "../bottom-navigation/BottomNavigation";
 
@@ -57,7 +56,7 @@ export const AnotherPage = () => {
                   maxWidth: 500,
                 }}
               >
-                <Link to="/">Back to Example page</Link>
+                <Link href="/">Back to Example page</Link>
               </Box>
             </Box>
           </Stack>
