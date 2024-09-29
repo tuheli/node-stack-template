@@ -36,6 +36,7 @@ export const Snackbar = () => {
   return (
     <>
       <MuiSnackbar
+        key={crypto.randomUUID()} // Forces recreation of the component.
         open={isOpen}
         autoHideDuration={6000}
         onClose={handleClose}
