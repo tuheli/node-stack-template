@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useSignInMutation, useSignUpMutation } from "../../features/apiSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { openedSnackbar } from "../../features/snackbarSlice";
-import { isErrorMessage, saveUserInLocalStorage } from "../../common/common";
+import { isErrorMessage } from "../../common/common";
 import { signedIn } from "../../features/userSlice";
 
 export const SignUp = () => {
