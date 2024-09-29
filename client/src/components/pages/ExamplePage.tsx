@@ -19,7 +19,7 @@ export const ExamplePage = () => {
         <Container>
           <Stack
             sx={{
-              gap: 4,
+              gap: 6,
               mt: 4,
               mb: 2,
             }}
@@ -53,6 +53,14 @@ export const ExamplePage = () => {
                   maxWidth: 500,
                 }}
               >
+                <Typography
+                  sx={{
+                    mb: 2,
+                    textAlign: "center",
+                  }}
+                >
+                  Example Sign Up Component
+                </Typography>
                 <SignUp />
               </Box>
             </Box>
@@ -68,6 +76,14 @@ export const ExamplePage = () => {
                   maxWidth: 500,
                 }}
               >
+                <Typography
+                  sx={{
+                    mb: 2,
+                    textAlign: "center",
+                  }}
+                >
+                  Example Sign In Component
+                </Typography>
                 <SignIn />
               </Box>
             </Box>
