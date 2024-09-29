@@ -73,12 +73,14 @@ export const SignIn = () => {
             <TextField
               label="Username"
               variant="outlined"
+              autoComplete="current-username"
               value={username}
               onChange={({ target }) => setUsername(target.value)}
             />
             <TextField
               label="Password"
               variant="outlined"
+              autoComplete="current-password"
               value={password}
               type="password"
               onChange={({ target }) => setPassword(target.value)}
