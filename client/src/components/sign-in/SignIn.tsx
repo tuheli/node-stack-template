@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Link,
   Paper,
@@ -22,9 +23,17 @@ export const SignIn = () => {
 
   const onSubmit = async () => {
     try {
+      const checkBox = document.getElementById(
+        "stay-signed-in-on-this-device"
+      ) as HTMLInputElement;
+
+      const isStaySignedInChecked = checkBox && checkBox.value === "on";
+
       const { user } = await signIn({ username, password }).unwrap();
 
-      saveUserInLocalStorage(user);
+      if (isStaySignedInChecked) {
+        saveUserInLocalStorage(user);
+      }
 
       dispatch(signedIn({ user }));
 
@@ -85,6 +94,24 @@ export const SignIn = () => {
               type="password"
               onChange={({ target }) => setPassword(target.value)}
             />
+            <Box
+              sx={{
+                display: "flex",
+                gap: 1,
+                my: 1,
+              }}
+            >
+              <div>
+                <input
+                  type="checkbox"
+                  id="stay-signed-in-on-this-device"
+                  name="stay-signed-in-on-this-device"
+                />
+              </div>
+              <label htmlFor="stay-signed-in-on-this-device">
+                Stay signed in on this device
+              </label>
+            </Box>
             <Button variant="contained" onClick={onSubmit}>
               Sign in
             </Button>
