@@ -21,7 +21,7 @@ const darkPalette: PaletteOptions = {
     secondary: "#fcfcfc",
   },
   primary: {
-    main: "#55009bff",
+    main: "#7a1bc7ff",
   },
 };
 
@@ -62,6 +62,9 @@ export const getTheme = (mode: PaletteMode): ThemeOptions => {
         },
       },
       MuiLink: {
+        styleOverrides: {
+          root: {},
+        },
         defaultProps: {
           component: LinkBehavior,
         } as LinkProps,
