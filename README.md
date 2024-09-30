@@ -1,5 +1,11 @@
 ## Boilerplate Code For Node Stack Apps Using AWS Postgres
 
+### The Example Is Hosted At
+
+https://node-stack-template.fly.dev/
+
+The example deployment is running user interface only.
+
 ### Images
 
 #### Desktop - Light Theme
