@@ -33,7 +33,6 @@ interface ValidateAuthorizationTokenResponse {
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  tagTypes: ["Foods"],
   baseQuery: fetchBaseQuery({
     baseUrl: "/api",
     prepareHeaders: (headers, { getState }) => {
